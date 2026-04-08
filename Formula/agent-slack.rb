@@ -4,14 +4,20 @@ class AgentSlack < Formula
   license "MIT"
   version "0.6.2"
 
-  arch = Hardware::CPU.arm? ? "darwin-arm64" : "darwin-x64"
+  on_arm do
+    url "https://api.github.com/repos/NSXBet/agent-slack/releases/assets/391623801",
+        headers: ["Accept: application/octet-stream"]
+  end
 
-  url "https://github.com/NSXBet/agent-slack/releases/download/v0.6.2/agent-slack-#{arch}",
-      headers: [
-        "Accept: application/octet-stream",
-        "Authorization: bearer #{`gh auth token`.strip}",
-      ]
+  on_intel do
+    url "https://api.github.com/repos/NSXBet/agent-slack/releases/assets/391623800",
+        headers: ["Accept: application/octet-stream"]
+  end
+
   sha256 :no_check
+
+  # Requires: export HOMEBREW_GITHUB_API_TOKEN=$(gh auth token)
+  # Add to your shell profile for persistence.
 
   def install
     arch = Hardware::CPU.arm? ? "darwin-arm64" : "darwin-x64"
