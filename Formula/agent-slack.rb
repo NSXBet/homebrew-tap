@@ -7,14 +7,14 @@ class AgentSlack < Formula
   on_arm do
     url "https://api.github.com/repos/NSXBet/agent-slack/releases/assets/391623801",
         headers: ["Accept: application/octet-stream"]
+    sha256 "0f3406b96f7b60846891d161b4d2d444f4d0871924414c6c412348a9af67243f"
   end
 
   on_intel do
     url "https://api.github.com/repos/NSXBet/agent-slack/releases/assets/391623800",
         headers: ["Accept: application/octet-stream"]
+    sha256 "e1f361346f7b4c4d4a15f3674af1a43b92622bd78af95ef22c734253ab583cff"
   end
-
-  sha256 :no_check
 
   # Requires: export HOMEBREW_GITHUB_API_TOKEN=$(gh auth token)
   # Add to your shell profile for persistence.
