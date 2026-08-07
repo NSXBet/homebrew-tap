@@ -1,16 +1,18 @@
 # homebrew-tap
 
-Private Homebrew tap for NSXBet tools.
+Homebrew tap for NSXBet tools.
 
 ## Usage
 
 ```bash
-brew tap nsxbet/tap git@github.com:NSXBet/homebrew-tap.git
-brew install nsxbet/tap/agent-slack
+brew tap nsxbet/tap
+brew install --cask nsxbet/tap/vela-ishtar
 ```
 
-## Available Casks
+## Available
 
-| Cask | Description |
-|------|-------------|
-| `agent-slack` | Slack automation CLI for AI agents |
+| Name | Kind | Description |
+|------|------|-------------|
+| `vela-ishtar` | cask | Premium macOS menu bar app for AI Hub (LLM gateway) spend |
+| `aihub` | formula | The AI coding agent built for the terminal |
+| `agent-slack` | formula | Slack automation CLI for AI agents (installs require a `HOMEBREW_GITHUB_API_TOKEN` with access to the private source repo) |
