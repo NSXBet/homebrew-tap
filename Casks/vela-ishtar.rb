@@ -1,6 +1,6 @@
 cask "vela-ishtar" do
-  version "1.0.0"
-  sha256 "6a12591bf1a50b9be506972a2a1780d2124ae9ff3219ad7371ecc3db26807f7b"
+  version "1.0.1"
+  sha256 "073ce30e899a1e947432804b48ee30f2819fd2449383a6332364f03b030b4965"
 
   url "https://github.com/NSXBet/vela-ishtar/releases/download/v#{version}/VelaIshtar-#{version}.zip"
   name "Vela Ishtar"
