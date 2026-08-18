@@ -5,14 +5,14 @@
 class Aihub < Formula
   desc "The AI coding agent built for the terminal."
   homepage "https://github.com/NSXBet/aihubcode"
-  version "7.4.26"
+  version "7.5.2"
 
   depends_on "ripgrep"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/NSXBet/aihubcode/releases/download/v7.4.26/aihub-darwin-x64.zip"
-      sha256 "4afeda93eb09e52728a96d1b08b963be9800506069d82759653b00b3a62ce8dc"
+      url "https://github.com/NSXBet/aihubcode/releases/download/v7.5.2/aihub-darwin-x64.zip"
+      sha256 "1b013c9cb548911d6a1c709034ae6bf4dd057e66a45271de08ef619aa67270bf"
 
       def install
         libexec.install "aihub", "aihub-sandbox-mutation-worker.js", "tree-sitter"
@@ -20,8 +20,8 @@ class Aihub < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/NSXBet/aihubcode/releases/download/v7.4.26/aihub-darwin-arm64.zip"
-      sha256 "0e393eb4b4d42911c1998a7c8a4a5b7b936239d4d894452c8bff6ca5b3f5c774"
+      url "https://github.com/NSXBet/aihubcode/releases/download/v7.5.2/aihub-darwin-arm64.zip"
+      sha256 "8c06b519d3f3e4f1c7af8281c2928d9490a48c7db28b5fd6da2d9def3a0696df"
 
       def install
         libexec.install "aihub", "aihub-sandbox-mutation-worker.js", "tree-sitter"
@@ -32,16 +32,16 @@ class Aihub < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/NSXBet/aihubcode/releases/download/v7.4.26/aihub-linux-x64.tar.gz"
-      sha256 "3a76c0a40f09c1b3474f02426b84b2b84f4d484a6af57c795ed80a8a995e6536"
+      url "https://github.com/NSXBet/aihubcode/releases/download/v7.5.2/aihub-linux-x64.tar.gz"
+      sha256 "c8ccfb63b571dc7a6b4dd8c734514bacf6b3dfab8b65dcf1105db72c5ff12165"
       def install
         libexec.install "aihub", "bwrap", "aihub-sandbox-mutation-worker.js", "tree-sitter", "licenses"
         (bin/"aihub").write_env_script libexec/"aihub", AIHUB_TREE_SITTER_WASM_DIR: libexec/"tree-sitter"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/NSXBet/aihubcode/releases/download/v7.4.26/aihub-linux-arm64.tar.gz"
-      sha256 "a911bca3051f1475368372c12e68560dc0d6d391c454ffa2ae96483fed60b39b"
+      url "https://github.com/NSXBet/aihubcode/releases/download/v7.5.2/aihub-linux-arm64.tar.gz"
+      sha256 "bd6ff62d1f6c53f15d50012f9bf9acf3bb46ff8e0cf8e560a54a11c3e96c0e6f"
       def install
         libexec.install "aihub", "bwrap", "aihub-sandbox-mutation-worker.js", "tree-sitter", "licenses"
         (bin/"aihub").write_env_script libexec/"aihub", AIHUB_TREE_SITTER_WASM_DIR: libexec/"tree-sitter"
