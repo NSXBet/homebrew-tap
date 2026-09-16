@@ -10,6 +10,10 @@ brew install nsxbet/tap/tasks
 brew install --cask nsxbet/tap/vela-ishtar
 ```
 
+The `tilt-dev` / `tip` formulas are refreshed automatically by a scheduled
+workflow in this repo that polls public [NSXBet/tilt](https://github.com/NSXBet/tilt)
+releases every 15 minutes — no cross-repo tokens involved.
+
 ## Available
 
 | Name | Kind | Description |

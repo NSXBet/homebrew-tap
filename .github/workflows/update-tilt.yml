@@ -1,0 +1,39 @@
+# Self-updating formulas for NSXBet/tilt. The tilt release workflow does not
+# touch this repo; this job polls public releases and regenerates formulas
+# from checksums.txt.
+name: Update tilt formulas
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tilt-formulas
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Refresh formulas
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/update-tilt-formulas.sh
+
+      - name: Commit
+        run: |
+          if [[ -n "$(git status --porcelain -- Formula)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add Formula
+            git commit -m "tilt: refresh formulas from NSXBet/tilt releases"
+            git push
+          else
+            echo "No formula changes"
+          fi
