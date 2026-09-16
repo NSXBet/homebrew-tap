@@ -18,3 +18,6 @@ brew install --cask nsxbet/tap/vela-ishtar
 | `aihub` | formula | The AI coding agent built for the terminal |
 | `tasks` | formula | Task tracker CLI (`tk`) for durable, git-synced project issues — self-updates with `tk update` |
 | `agent-slack` | formula | Slack automation CLI for AI agents (installs require a `HOMEBREW_GITHUB_API_TOKEN` with access to the private source repo) |
+| `tilt-dev` | formula | [tilt](https://github.com/NSXBet/tilt) fork (NSXBet) — latest tagged release, command `tilt`. Shadows homebrew-core's `tilt-dev` |
+| `tilt-dev@x.y.z` | formula | Pinned tagged tilt releases (keg-only; `brew link --overwrite nsxbet/tap/tilt-dev@x.y.z` to use) |
+| `tip` | formula | Tilt fork nightly from `master`, command `tip`. Auto-updated on every push to master |
