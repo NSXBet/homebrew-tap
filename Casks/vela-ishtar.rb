@@ -11,8 +11,8 @@ cask "vela-ishtar" do
 
   # The app is ad-hoc signed and not notarized; strip quarantine on install
   # so Gatekeeper doesn't block the first launch with a malware dialog.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Vela Ishtar.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "{{appdir}}/Vela Ishtar.app"]
   end
 end
