@@ -23,8 +23,6 @@ class AgentSlack < Formula
   end
 
   def install
-    odie "HOMEBREW_GITHUB_API_TOKEN is required to download agent-slack release assets" if ENV["HOMEBREW_GITHUB_API_TOKEN"].to_s.empty?
-
     arch = Hardware::CPU.arm? ? "darwin-arm64" : "darwin-x64"
     bin.install "agent-slack-#{arch}" => "agent-slack"
   end
