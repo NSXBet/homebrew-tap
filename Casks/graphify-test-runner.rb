@@ -4,21 +4,21 @@ cask "graphify-test-runner" do
 
   on_macos do
     on_arm do
-      sha256 "4a815a7a83770b1984c94f3ae9b6b63128fe1817902e2a257c24694e0e2c58c4"
+      sha256 "e53f49c60f0e5cf77cc62f5cf95de6c56e385ed969c7467789d3d9a25b71ee7f"
       url "https://github.com/NSXBet/go-graphify-test-runner/releases/download/v#{version}/graphify-test-runner_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "c09e2eb3df08d9ae0d9ddd0550c33a6e98ec3d8811b50ecf6c1b0613756b2a01"
+      sha256 "f801d431488c2c026e61eddb004db23cbc3e120eb5f3ac190375489a761573b1"
       url "https://github.com/NSXBet/go-graphify-test-runner/releases/download/v#{version}/graphify-test-runner_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "96aa90c5246ed8595022637a45c08a3ef143803a6aa446c010c1c9215acc15d0"
+      sha256 "a40cfbbae195b8074381153d40edebe301e67b4e0a41897d1ad9a2145f69a937"
       url "https://github.com/NSXBet/go-graphify-test-runner/releases/download/v#{version}/graphify-test-runner_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "a33b66e328b7ab6100444eeffce9dd7261c922f5580fee1827c013e34ac20d37"
+      sha256 "cc37015c58194d41de8510e18b92dadabd5335194801b10d79ada830b7fbb897"
       url "https://github.com/NSXBet/go-graphify-test-runner/releases/download/v#{version}/graphify-test-runner_#{version}_linux_amd64.tar.gz"
     end
   end
