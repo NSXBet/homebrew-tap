@@ -18,5 +18,5 @@ cask "conduit" do
   # workaround needed.
   app "ConduitHost.app"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 end
