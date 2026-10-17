@@ -4,23 +4,23 @@
 class Tasks < Formula
   desc "Task tracker CLI for durable, git-synced project issues"
   homepage "https://github.com/NSXBet/tasks"
-  version "0.5.0"
+  version "0.6.0"
 
   # Self-contained `tk` binaries from the GitHub release. Each platform
   # downloads the raw binary under its asset name (tk-<target>), so install
   # renames it to `tk`.
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/NSXBet/tasks/releases/download/v0.5.0/tk-darwin-x64"
-      sha256 "e25355b8c0105f325eeb5118e51a93042ba2c669c7a3fd061f209afa3e079c5a"
+      url "https://github.com/NSXBet/tasks/releases/download/v0.6.0/tk-darwin-x64"
+      sha256 "029ab4f441c1012800c664a125255fc484cf959d538973000b2596a90c164a85"
 
       def install
         bin.install "tk-darwin-x64" => "tk"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/NSXBet/tasks/releases/download/v0.5.0/tk-darwin-arm64"
-      sha256 "d0c39d309e7da8e361691cabeaabf1daba4e4a66d5e1a16498aa503c4c4aed8f"
+      url "https://github.com/NSXBet/tasks/releases/download/v0.6.0/tk-darwin-arm64"
+      sha256 "94706b69892cdcbaff77ba18aa494d25aafabef87fd75a3fb3990c2ea43411e0"
 
       def install
         bin.install "tk-darwin-arm64" => "tk"
@@ -30,16 +30,16 @@ class Tasks < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/NSXBet/tasks/releases/download/v0.5.0/tk-linux-x64"
-      sha256 "384acd82cc8745e3fa14fefbc8ed9aaf2d5e6eb7f91a52962847ba8e83ceef54"
+      url "https://github.com/NSXBet/tasks/releases/download/v0.6.0/tk-linux-x64"
+      sha256 "91175f4a458e077e399ab784784e7c76b78aeb2bd0268ce9e34b08e67c7ecd1d"
 
       def install
         bin.install "tk-linux-x64" => "tk"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/NSXBet/tasks/releases/download/v0.5.0/tk-linux-arm64"
-      sha256 "fee16a140e5f7874d96d53207862138a1fb4a5228a47901e426f1bc568af6cf5"
+      url "https://github.com/NSXBet/tasks/releases/download/v0.6.0/tk-linux-arm64"
+      sha256 "ca97d7ebd72e1c329113a0325c86e530da05b2b86b35316e5c3cf93d3c42d476"
 
       def install
         bin.install "tk-linux-arm64" => "tk"
